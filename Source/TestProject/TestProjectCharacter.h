@@ -22,12 +22,12 @@ class ATestProjectCharacter : public ACharacter
 	GENERATED_BODY()
 
 	/** Camera boom positioning the camera behind the character */
-/*	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	USpringArmComponent* CameraBoom;*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	USpringArmComponent* CameraBoom;
 
 	/** Follow camera */
-	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	//UCameraComponent* FollowCamera;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	UCameraComponent* FollowCamera;
 	
 	/** MappingContext */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -40,6 +40,10 @@ class ATestProjectCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
+
+	/* LeetCode Test Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* TestAction;
 
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -55,6 +59,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Climbing)
 	bool bIsTouchingGround;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Climbing)
+	int Target = 9;
+
+	int currentNum;
+
+	int nextNum;
+
+	int sum;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Climbing)
+	TArray <int32> MyIntegerArray = { 2, 7, 11, 15 };
+
 protected:
 
 	/** Called for movement input */
@@ -62,6 +78,9 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	/* Called for LeetCode test problem */
+	void Test(const FInputActionValue& Value);
 
 	/* Enables or disables climbing */
 	UFUNCTION(BlueprintCallable)
@@ -81,8 +100,8 @@ protected:
 
 public:
 	/** Returns CameraBoom subobject **/
-//	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
-//	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 };
 
