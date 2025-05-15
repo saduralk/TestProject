@@ -22,6 +22,9 @@ public:
 
 	void OnCreateSessionComplete(FName SessionName, bool bSuccess);
 
+	UFUNCTION()
+	void OnDestroySessionComplete(FName SessionName, bool bSuccess);
+
 	UFUNCTION(Client, Reliable, BlueprintCallable)
 	void StartMultiplayerGame();
 	

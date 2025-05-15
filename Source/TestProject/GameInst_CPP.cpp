@@ -29,7 +29,16 @@ void UGameInst_CPP::StartMultiplayerGame_Implementation()
             SessionSettings.bUseLobbiesIfAvailable = true;
             FName SessionName = FName("MySessionName"); // Session name
 
-            
+			if (SessionInterface->GetNamedSession(SessionName))
+			{
+				FOnDestroySessionCompleteDelegate DestroySessionCompleteDelegate;
+				DestroySessionCompleteDelegate.BindUObject(this, &UGameInst_CPP::OnDestroySessionComplete);
+				SessionInterface->AddOnDestroySessionCompleteDelegate_Handle(DestroySessionCompleteDelegate);
+				SessionInterface->DestroySession(SessionName);
+				
+				SessionInterface->DestroySession(SessionName);
+				return;
+			}
 
             UWorld* World = GetWorld();
             APlayerController* PlayerController = World->GetFirstPlayerController();
@@ -38,10 +47,10 @@ void UGameInst_CPP::StartMultiplayerGame_Implementation()
 //                SessionInterface->CreateSession(*PlayerController->GetUniqueID(), SessionName, SessionSettings);
             }
 
-//            FOnCreateSessionCompleteDelegate CreateSessionCompleteDelegate;
-//            CreateSessionCompleteDelegate.BindUObject(this, &UGameInst_CPP::OnCreateSessionComplete);
+            FOnCreateSessionCompleteDelegate CreateSessionCompleteDelegate;
+            CreateSessionCompleteDelegate.BindUObject(this, &UGameInst_CPP::OnCreateSessionComplete);
 
-//            SessionInterface->AddOnCreateSessionCompleteDelegate_Handle(CreateSessionCompleteDelegate);
+            SessionInterface->AddOnCreateSessionCompleteDelegate_Handle(CreateSessionCompleteDelegate);
             SessionInterface->CreateSession(PlayerController->GetUniqueID(), SessionName, SessionSettings);
 
 //            SessionInterface->StartSession(SessionName);
@@ -62,6 +71,7 @@ void UGameInst_CPP::OnCreateSessionComplete(FName SessionName, bool bSuccess)
         if (context_object)
         {
             UGameplayStatics::OpenLevel(context_object, FName("ThirdPersonMap"), true, FString("listen"));
+			UE_LOG(LogTemp, Display, TEXT("Session created"));
         }
         else
         {
@@ -72,6 +82,15 @@ void UGameInst_CPP::OnCreateSessionComplete(FName SessionName, bool bSuccess)
     }
     else
     {
+		UE_LOG(LogTemp, Display, TEXT("Session creation failed"));
         // Session creation failed
     }
+}
+
+void UGameInst_CPP::OnDestroySessionComplete(FName SessionName, bool bSuccess)
+{
+	if (bSuccess)
+	{
+		StartMultiplayerGame_Implementation();
+	}
 }
