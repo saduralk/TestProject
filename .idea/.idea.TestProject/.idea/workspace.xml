@@ -27,12 +27,12 @@
     <setting file="file://$PROJECT_DIR$/Source/TestProject.Target.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/ConnectionTypes_E.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/ConnectionTypes_E.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/TestProject/GameInst_CPP.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/TestProject/GameInst_CPP.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/TestProject/GameInst_CPP.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/TestProject/GameInst_CPP.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/LobbyW.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/LobbyW.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProject.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProjectEditor.Target.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -185,6 +185,7 @@
       <workItem from="1747327723280" duration="7251000" />
       <workItem from="1747341238071" duration="57000" />
       <workItem from="1747342022341" duration="1112000" />
+      <workItem from="1747344414330" duration="1785000" />
     </task>
     <servers />
   </component>

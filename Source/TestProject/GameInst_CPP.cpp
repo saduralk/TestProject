@@ -70,13 +70,14 @@ void UGameInst_CPP::OnCreateSessionComplete(FName SessionName, bool bSuccess)
         UWorld* context_object = GetWorld();
         if (context_object)
         {
-            UGameplayStatics::OpenLevel(context_object, FName("ThirdPersonMap"), true, FString("listen"));
-			UE_LOG(LogTemp, Display, TEXT("Session created"));
+            UGameplayStatics::OpenLevel(context_object, FName("LVL_Lobby"), true, FString("listen"));
+			UE_LOG(LogTemp, Error, TEXT("Session created"));
         }
         else
         {
             UWorld* world_context_object = GEngine->GetWorldFromContextObjectChecked(this);
-            UGameplayStatics::OpenLevel(world_context_object, FName("ThirdPersonMap"), true, FString("listen"));
+            UGameplayStatics::OpenLevel(world_context_object, FName("LVL_Lobby"), true, FString("listen"));
+			UE_LOG(LogTemp, Error, TEXT("Session created, opened level"));
 
         }
     }
