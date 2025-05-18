@@ -23,7 +23,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/Unreal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject.Target.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/ConnectionTypes_E.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/ConnectionTypes_E.h" root0="FORCE_HIGHLIGHTING" />
@@ -33,7 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Source/TestProject/LobbyW.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProject.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/TestProject/TestProjectCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/TestProjectEditor.Target.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -187,7 +186,7 @@
       <workItem from="1747342022341" duration="1112000" />
       <workItem from="1747344414330" duration="1785000" />
       <workItem from="1747528679856" duration="300000" />
-      <workItem from="1747535925646" duration="12000" />
+      <workItem from="1747535925646" duration="611000" />
     </task>
     <servers />
   </component>
